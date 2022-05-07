@@ -24,6 +24,7 @@ public class SpringDataApplication implements CommandLineRunner {
 	@Autowired
 	Environment environment;
 	
+	
 	@Autowired
 	BookService bookService;
 
