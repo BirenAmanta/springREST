@@ -1,10 +1,10 @@
-package com.mindtree.SpringData;
+package com.mindtree;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDataApplicationTests {
+class SpringRestApplicationTests {
 
 	@Test
 	void contextLoads() {
