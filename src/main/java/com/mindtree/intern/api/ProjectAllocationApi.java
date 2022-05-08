@@ -79,7 +79,7 @@ public class ProjectAllocationApi {
 	public ResponseEntity<String> deleteProject(@PathVariable Integer projectId) throws InternException {
 		projectAllocationService.deleteProject(projectId);
 		String message = enviroment.getProperty("API.PROJECT_DELETE _SUCCESS");
-
+		LOGGER.info(message);
 		return new ResponseEntity<>(message, HttpStatus.OK);
 	}
 

@@ -38,11 +38,12 @@ public class ExceptionControllerAdvice {
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorInfo> generalExceptionHandler(Exception exception) {
+		LOGGER.error(exception.getMessage(),exception);
 		ErrorInfo error = new ErrorInfo();
 		error.setErrorCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
 		error.setErrorMessage(enviroment.getProperty("General.EXCEPTION_MESSAGE"));
 		error.setTimeStamp(LocalDate.now());
-		LOGGER.error(error.getErrorMessage());
+		
 		return new ResponseEntity<ErrorInfo>(error, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 

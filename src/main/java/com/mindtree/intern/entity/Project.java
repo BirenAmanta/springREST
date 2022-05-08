@@ -4,13 +4,12 @@ import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-
 import com.mindtree.intern.dto.ProjectDTO;
 
 import lombok.Data;
@@ -26,7 +25,7 @@ public class Project {
 	private String projectName;
 	private Integer ideaOwner;
 	private LocalDate releaseDate;
-	@ManyToOne(cascade=CascadeType.REFRESH)
+	@ManyToOne(cascade=CascadeType.MERGE,fetch = FetchType.LAZY)
 	@JoinColumn(name="mentor_id")
 	private Mentor  mentor;
 	public ProjectDTO getDTO()

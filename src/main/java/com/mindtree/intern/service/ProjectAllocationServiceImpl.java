@@ -38,9 +38,10 @@ public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 			}
 			else
 			{
+				project.setMentorDTO(data.get().getDTO());
 				Project projectSave=projectRepo.save(project.getEntity());
-				projectSave.getMentor().setNumberOfProjectMentored(projectSave.getMentor().getNumberOfProjectMentored()+1);
-				return projectSave.getProjectId();
+				data.get().setNumberOfProjectMentored(data.get().getNumberOfProjectMentored()+1);
+				return projectSave.getDTO().getProjectId();
 			}
 		}
 		else
@@ -64,16 +65,23 @@ public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 	public void updateProjectMentor(Integer projectId, Integer mentorId) throws InternException{
 		Optional<Mentor>mentorData=mentorRepo.findById(mentorId);
 		Mentor mentorDetails=mentorData.orElseThrow(()->new InternException("Service.MENTOR_NOT_FOUND"));
+		if(mentorDetails.getNumberOfProjectMentored()>=3)
+		{
+			throw new InternException("Service.CANNOT_ALLOCATE_PROJECT");
+		}
 		Optional<Project>projectData=projectRepo.findById(projectId);
 		Project projectDetails=projectData.orElseThrow(()->new InternException("Service.PROJECT_NOT_FOUND"));
 		projectDetails.setMentor(mentorDetails);
-
+		mentorDetails.setNumberOfProjectMentored(mentorDetails.getNumberOfProjectMentored()+1);
 	}
 
 	@Override
 	public void deleteProject(Integer projectId) throws InternException{
 		Optional<Project>projectData=projectRepo.findById(projectId);
 		Project projectDetails=projectData.orElseThrow(()->new InternException("Service.PROJECT_NOT_FOUND"));
+		Optional<Mentor>mentorData=mentorRepo.findById(projectDetails.getMentor().getMentorId());
+		Mentor mentorDetails=mentorData.orElseThrow(()->new InternException("Service.MENTOR_NOT_FOUND"));
+		mentorDetails.setNumberOfProjectMentored(mentorDetails.getNumberOfProjectMentored()-1);
 		projectDetails.setMentor(null);
 		projectRepo.delete(projectDetails);
 	}
