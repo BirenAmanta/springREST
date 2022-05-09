@@ -29,7 +29,7 @@ public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 
 	@Override
 	public Integer allocateProject(ProjectDTO project) throws InternException {
-		Optional<Mentor> data = mentorRepo.findById(project.getMentorDTO().getMentorId());
+		Optional<Mentor> data = mentorRepo.findById(Integer.parseInt(project.getMentorDTO().getMentorId()));
 		if (data.isPresent()) {
 			if (data.get().getNumberOfProjectMentored() >= 3) {
 				throw new InternException("Service.CANNOT_ALLOCATE_PROJECT");
@@ -60,7 +60,7 @@ public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 		List<MentorDTO> details = new ArrayList<>();
 		retrivedData.stream().forEach((data) -> {
 			MentorDTO mentorDTO = new MentorDTO();
-			mentorDTO.setMentorId(data.getMentorId());
+			mentorDTO.setMentorId(Integer.toString(data.getMentorId()));
 			mentorDTO.setMentorName(data.getMentorName());
 			mentorDTO.setNumberOfProjectMentored(data.getNumberOfProjectMentored());
 			details.add(mentorDTO);
@@ -98,7 +98,7 @@ public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 		Project details = data.orElseThrow(() -> new InternException("Service.PROJECT_NOT_FOUND"));
 		Mentor mentor = mentorRepo.findById(details.getMentor().getMentorId()).get();
 		MentorDTO mentorDTO = new MentorDTO();
-		mentorDTO.setMentorId(mentor.getMentorId());
+		mentorDTO.setMentorId(Integer.toString(mentor.getMentorId()));
 		mentorDTO.setMentorName(mentor.getMentorName());
 		mentorDTO.setNumberOfProjectMentored(mentor.getNumberOfProjectMentored());
 		ProjectDTO retrivedData = new ProjectDTO();

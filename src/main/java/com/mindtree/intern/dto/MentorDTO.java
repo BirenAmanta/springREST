@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class MentorDTO {
-	@NotNull(message = "mentor.mentorid.absent")
-	@Pattern(regexp ="([0-9]{4})",message = "mentor.mentorid.invalid")
-	private Integer mentorId;
+	@NotNull(message = "{mentor.mentorid.absent}")
+	@Pattern(regexp ="([0-9]{4})",message = "{mentor.mentorid.invalid}")
+	private String mentorId;
 	private String mentorName;
 	private Integer numberOfProjectMentored;
 }

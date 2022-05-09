@@ -1,0 +1,101 @@
+09-May-2022 15:41:36 INFO - HV000001: Hibernate Validator 6.2.3.Final
+09-May-2022 15:41:36 INFO - Starting SpringRestApplication using Java 16.0.2 on MT-5CD119LF0H with PID 7108 (D:\Spring\springREST\target\classes started by M1074035 in D:\Spring\springREST)
+09-May-2022 15:41:36 INFO - No active profile set, falling back to 1 default profile: "default"
+09-May-2022 15:41:36 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09-May-2022 15:41:36 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09-May-2022 15:41:37 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09-May-2022 15:41:37 INFO - Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+09-May-2022 15:41:38 INFO - Tomcat initialized with port(s): 8765 (http)
+09-May-2022 15:41:38 INFO - Initializing ProtocolHandler ["http-nio-8765"]
+09-May-2022 15:41:38 INFO - Starting service [Tomcat]
+09-May-2022 15:41:38 INFO - Starting Servlet engine: [Apache Tomcat/9.0.62]
+09-May-2022 15:41:38 INFO - Initializing Spring embedded WebApplicationContext
+09-May-2022 15:41:38 INFO - Root WebApplicationContext: initialization completed in 2129 ms
+09-May-2022 15:41:38 INFO - HikariPool-1 - Starting...
+09-May-2022 15:41:39 INFO - HikariPool-1 - Start completed.
+09-May-2022 15:41:39 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+09-May-2022 15:41:39 INFO - HHH000412: Hibernate ORM core version 5.6.8.Final
+09-May-2022 15:41:39 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09-May-2022 15:41:39 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09-May-2022 15:41:40 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09-May-2022 15:41:40 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09-May-2022 15:41:40 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09-May-2022 15:41:41 INFO - LiveReload server is running on port 35729
+09-May-2022 15:41:41 INFO - Starting ProtocolHandler ["http-nio-8765"]
+09-May-2022 15:41:41 INFO - Tomcat started on port(s): 8765 (http) with context path ''
+09-May-2022 15:41:41 INFO - Started SpringRestApplication in 5.787 seconds (JVM running for 7.855)
+09-May-2022 15:42:03 INFO - Application shutdown requested.
+09-May-2022 15:42:03 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+09-May-2022 15:42:03 INFO - HikariPool-1 - Shutdown initiated...
+09-May-2022 15:42:03 INFO - HikariPool-1 - Shutdown completed.
+09-May-2022 15:42:09 INFO - HV000001: Hibernate Validator 6.2.3.Final
+09-May-2022 15:42:10 INFO - Starting SpringRestApplication using Java 16.0.2 on MT-5CD119LF0H with PID 13812 (D:\Spring\springREST\target\classes started by M1074035 in D:\Spring\springREST)
+09-May-2022 15:42:10 INFO - No active profile set, falling back to 1 default profile: "default"
+09-May-2022 15:42:10 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09-May-2022 15:42:10 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09-May-2022 15:42:10 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09-May-2022 15:42:11 INFO - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+09-May-2022 15:42:12 INFO - Tomcat initialized with port(s): 8765 (http)
+09-May-2022 15:42:12 INFO - Initializing ProtocolHandler ["http-nio-8765"]
+09-May-2022 15:42:12 INFO - Starting service [Tomcat]
+09-May-2022 15:42:12 INFO - Starting Servlet engine: [Apache Tomcat/9.0.62]
+09-May-2022 15:42:12 INFO - Initializing Spring embedded WebApplicationContext
+09-May-2022 15:42:12 INFO - Root WebApplicationContext: initialization completed in 2193 ms
+09-May-2022 15:42:12 INFO - HikariPool-1 - Starting...
+09-May-2022 15:42:12 INFO - HikariPool-1 - Start completed.
+09-May-2022 15:42:13 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+09-May-2022 15:42:13 INFO - HHH000412: Hibernate ORM core version 5.6.8.Final
+09-May-2022 15:42:13 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09-May-2022 15:42:13 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+09-May-2022 15:42:14 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09-May-2022 15:42:14 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09-May-2022 15:42:14 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09-May-2022 15:42:15 INFO - LiveReload server is running on port 35729
+09-May-2022 15:42:15 INFO - Starting ProtocolHandler ["http-nio-8765"]
+09-May-2022 15:42:15 INFO - Tomcat started on port(s): 8765 (http) with context path ''
+09-May-2022 15:42:15 INFO - Started SpringRestApplication in 6.075 seconds (JVM running for 7.513)
+09-May-2022 15:42:22 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09-May-2022 15:42:22 INFO - Initializing Servlet 'dispatcherServlet'
+09-May-2022 15:42:22 INFO - Completed initialization in 4 ms
+09-May-2022 15:42:23 ERROR - Mentor details not found
+09-May-2022 15:42:23 ERROR - Mentor details not found
+09-May-2022 15:42:23 WARN - Resolved [com.mindtree.intern.exception.InternException: Service.MENTOR_NOT_FOUND]
+09-May-2022 15:44:38 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+09-May-2022 15:44:38 INFO - HikariPool-1 - Shutdown initiated...
+09-May-2022 15:44:38 INFO - HikariPool-1 - Shutdown completed.
+[INFO ] 2022-05-09 15:44:38.948 [restartedMain] SpringRestApplication - Starting SpringRestApplication using Java 16.0.2 on MT-5CD119LF0H with PID 13812 (D:\Spring\springREST\target\classes started by M1074035 in D:\Spring\springREST)
+[INFO ] 2022-05-09 15:44:38.950 [restartedMain] SpringRestApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-09 15:44:39.239 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-05-09 15:44:39.258 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+[INFO ] 2022-05-09 15:44:42.592 [background-preinit] Version - HV000001: Hibernate Validator 6.2.3.Final
+[INFO ] 2022-05-09 15:44:42.638 [restartedMain] SpringRestApplication - Starting SpringRestApplication using Java 16.0.2 on MT-5CD119LF0H with PID 19636 (D:\Spring\springREST\target\classes started by M1074035 in D:\Spring\springREST)
+[INFO ] 2022-05-09 15:44:42.643 [restartedMain] SpringRestApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-09 15:44:42.706 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2022-05-09 15:44:42.706 [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2022-05-09 15:44:43.647 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-05-09 15:44:43.719 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+[INFO ] 2022-05-09 15:44:44.877 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8765 (http)
+[INFO ] 2022-05-09 15:44:44.890 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8765"]
+[INFO ] 2022-05-09 15:44:44.891 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-05-09 15:44:44.891 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+[INFO ] 2022-05-09 15:44:45.149 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-05-09 15:44:45.149 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2442 ms
+[INFO ] 2022-05-09 15:44:45.451 [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2022-05-09 15:44:46.192 [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2022-05-09 15:44:46.273 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-05-09 15:44:46.388 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+[INFO ] 2022-05-09 15:44:46.811 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2022-05-09 15:44:47.069 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-05-09 15:44:48.192 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-05-09 15:44:48.209 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-05-09 15:44:49.260 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2022-05-09 15:44:50.235 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2022-05-09 15:44:50.271 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8765"]
+[INFO ] 2022-05-09 15:44:50.319 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8765 (http) with context path ''
+[INFO ] 2022-05-09 15:44:50.338 [restartedMain] SpringRestApplication - Started SpringRestApplication in 8.204 seconds (JVM running for 9.882)
+[INFO ] 2022-05-09 15:44:52.743 [http-nio-8765-exec-2] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2022-05-09 15:44:52.744 [http-nio-8765-exec-2] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2022-05-09 15:44:52.747 [http-nio-8765-exec-2] DispatcherServlet - Completed initialization in 3 ms
+[ERROR] 2022-05-09 15:44:53.302 [http-nio-8765-exec-2] LoggingAspect - Mentor details not found
+[ERROR] 2022-05-09 15:44:53.319 [http-nio-8765-exec-2] ExceptionControllerAdvice - Mentor details not found
+[WARN ] 2022-05-09 15:44:53.373 [http-nio-8765-exec-2] ExceptionHandlerExceptionResolver - Resolved [com.mindtree.intern.exception.InternException: Service.MENTOR_NOT_FOUND]

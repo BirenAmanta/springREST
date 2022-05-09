@@ -10,13 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.springframework.validation.annotation.Validated;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @Entity
-
+@Validated
 public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

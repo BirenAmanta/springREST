@@ -32,7 +32,7 @@ class SpringRestApplicationTests {
 		ProjectDTO project = new ProjectDTO();
 		project.setIdeaOwner(1009);
 		MentorDTO mentor = new MentorDTO();
-		mentor.setMentorId(1002);
+		mentor.setMentorId(Integer.toString(1002));
 		Mentor data=new Mentor();
 		data.setMentorId(1002);
 		data.setMentorId(1002);
@@ -42,7 +42,7 @@ class SpringRestApplicationTests {
 		project.setProjectId(1);
 		project.setProjectName("Android Shopping App");
 		project.setReleaseDate(LocalDate.of(2019, 9, 27));
-		Mockito.when(mentorRepository.findById(mentor.getMentorId())).thenReturn(Optional.of(data));
+		Mockito.when(mentorRepository.findById(Integer.parseInt(mentor.getMentorId()))).thenReturn(Optional.of(data));
 		InternException e = Assertions.assertThrows(InternException.class,
 				() -> projectAllocationService.allocateProject(project));
 		Assertions.assertEquals("Service.CANNOT_ALLOCATE_PROJECT", e.getMessage());
@@ -53,8 +53,8 @@ class SpringRestApplicationTests {
 	public void allocateProjectMentorNotFoundTest() throws Exception {
 		ProjectDTO project = new ProjectDTO();
 		project.setMentorDTO(new MentorDTO());
-		project.getMentorDTO().setMentorId(9000);
-		Mockito.when(mentorRepository.findById(project.getMentorDTO().getMentorId()))
+		project.getMentorDTO().setMentorId(Integer.toString(9000));
+		Mockito.when(mentorRepository.findById(Integer.parseInt(project.getMentorDTO().getMentorId())))
 				.thenReturn(Optional.ofNullable(null));
 		InternException e = Assertions.assertThrows(InternException.class,
 				() -> projectAllocationService.allocateProject(project));

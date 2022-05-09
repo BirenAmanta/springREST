@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +30,7 @@ import com.mindtree.intern.service.ProjectAllocationService;
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/intern")
+@Validated
 public class ProjectAllocationApi {
 	
 	static final Log LOGGER=LogFactory.getLog(ProjectAllocationService.class);
@@ -40,7 +42,7 @@ public class ProjectAllocationApi {
 	private ProjectAllocationService projectAllocationService;
 
 	@PostMapping(value = "/project")
-	public ResponseEntity<String> allocateProject(@RequestBody @Valid ProjectDTO project) throws InternException {
+	public ResponseEntity<String> allocateProject(@Valid @RequestBody  ProjectDTO project) throws InternException {
 		Integer Id = projectAllocationService.allocateProject(project);
 		String message = enviroment.getProperty("API.ALLOCATION_SUCCESS") + Id;
 		LOGGER.info(message);
@@ -57,19 +59,19 @@ public class ProjectAllocationApi {
 
 	@GetMapping(value = "/project/{projectId}")
 	public ResponseEntity<ProjectDTO> getProjectDetails(
-			@PathVariable @Pattern(regexp = "([0-9]+)", message = "project.projectid.invalid") Integer projectId)
+			@PathVariable @Pattern(regexp = "([0-9]+)", message = "{project.projectid.invalid}") String projectId)
 			throws InternException {
-		ProjectDTO details = projectAllocationService.getDetails(projectId);
+		ProjectDTO details = projectAllocationService.getDetails(Integer.parseInt(projectId));
 		LOGGER.info("retrived data: "+details);
 		return new ResponseEntity<>(details, HttpStatus.OK);
 	}
 
 	@PutMapping(value = "/projectUpdate/{projectId}/{mentorId}")
 	public ResponseEntity<String> updateProjectMentor(
-			@PathVariable @Pattern(regexp = "([0-9]+)", message = "project.projectid.invalid") Integer projectId,
-			@PathVariable @Pattern(regexp = "([0-9]{4})", message = "mentor.mentorid.invalid") Integer mentorId)
+			@PathVariable @Pattern(regexp = "[0-9]+", message = "{project.projectid.invalid}") String projectId,
+			@PathVariable @Pattern(regexp = "[0-9]{4}", message = "{mentor.mentorid.invalid}") String mentorId)
 			throws InternException {
-		projectAllocationService.updateProjectMentor(projectId, mentorId);
+		projectAllocationService.updateProjectMentor(Integer.parseInt(projectId),Integer.parseInt(mentorId));
 		String message = enviroment.getProperty("API.PROJECT_UPDATE_SUCCESS");
 		LOGGER.info(message);
 		return new ResponseEntity<>(message, HttpStatus.OK);
@@ -78,7 +80,7 @@ public class ProjectAllocationApi {
 	@DeleteMapping(value = "/deleteProject/{projectId}")
 	public ResponseEntity<String> deleteProject(@PathVariable Integer projectId) throws InternException {
 		projectAllocationService.deleteProject(projectId);
-		String message = enviroment.getProperty("API.PROJECT_DELETE _SUCCESS");
+		String message = enviroment.getProperty("API.PROJECT_DELETE_SUCCESS");
 		LOGGER.info(message);
 		return new ResponseEntity<>(message, HttpStatus.OK);
 	}
