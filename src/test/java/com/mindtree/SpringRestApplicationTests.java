@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.mindtree.intern.dto.MentorDTO;
 import com.mindtree.intern.dto.ProjectDTO;
+import com.mindtree.intern.entity.Mentor;
 import com.mindtree.intern.exception.InternException;
 import com.mindtree.intern.repository.MentorRepository;
 import com.mindtree.intern.service.ProjectAllocationService;
@@ -32,13 +33,16 @@ class SpringRestApplicationTests {
 		project.setIdeaOwner(1009);
 		MentorDTO mentor = new MentorDTO();
 		mentor.setMentorId(1002);
-		mentor.setMentorName("Warner");
-		mentor.setNumberOfProjectMentored(3);
+		Mentor data=new Mentor();
+		data.setMentorId(1002);
+		data.setMentorId(1002);
+		data.setMentorName("Warner");
+		data.setNumberOfProjectMentored(3);
 		project.setMentorDTO(mentor);
 		project.setProjectId(1);
 		project.setProjectName("Android Shopping App");
 		project.setReleaseDate(LocalDate.of(2019, 9, 27));
-		Mockito.when(mentorRepository.findById(mentor.getMentorId())).thenReturn(Optional.of(mentor.getEntity()));
+		Mockito.when(mentorRepository.findById(mentor.getMentorId())).thenReturn(Optional.of(data));
 		InternException e = Assertions.assertThrows(InternException.class,
 				() -> projectAllocationService.allocateProject(project));
 		Assertions.assertEquals("Service.CANNOT_ALLOCATE_PROJECT", e.getMessage());

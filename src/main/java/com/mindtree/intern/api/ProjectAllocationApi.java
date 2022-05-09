@@ -52,7 +52,7 @@ public class ProjectAllocationApi {
 			throws InternException {
 		List<MentorDTO> mentorDetails = projectAllocationService.getMentors(numberOfProjectsMentored);
 		LOGGER.info("retrived data: "+mentorDetails);
-		return new ResponseEntity<List<MentorDTO>>(mentorDetails, HttpStatus.OK);
+		return new ResponseEntity<>(mentorDetails, HttpStatus.OK);
 	}
 
 	@GetMapping(value = "/project/{projectId}")
